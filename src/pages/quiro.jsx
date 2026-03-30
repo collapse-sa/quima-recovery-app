@@ -61,7 +61,7 @@ const highlights = [
   "Imagen moderna y confiable",
 ];
 
-export default function quiro() {
+export default function Quiro() {
   return (
     <div className="quiro-page">
       <section className="quiro-hero">

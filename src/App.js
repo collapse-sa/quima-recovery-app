@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
-import quiro from "./pages/quiro";
+import Quiro from "./pages/quiro";
 
 function App() {
-  return <quiro />;
+  return <Quiro />;
 }
 
 export default App;
