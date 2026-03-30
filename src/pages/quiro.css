@@ -1,0 +1,676 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.quiro-page {
+  background: #03111f;
+  color: #ffffff;
+}
+
+.quiro-container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.quiro-section {
+  position: relative;
+  padding: 90px 0;
+}
+
+.quiro-section-light {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.quiro-section-soft {
+  background: linear-gradient(180deg, #ebfbff 0%, #ffffff 100%);
+  color: #0f172a;
+}
+
+.quiro-section-dark {
+  background: #06192b;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.quiro-dark-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(0, 180, 216, 0.16), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(144, 224, 239, 0.10), transparent 25%);
+  z-index: 1;
+}
+
+.quiro-hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.quiro-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(0, 180, 216, 0.28), transparent 32%),
+    radial-gradient(circle at left, rgba(144, 224, 239, 0.12), transparent 25%),
+    linear-gradient(180deg, #041321 0%, #06192b 50%, #081c2f 100%);
+  z-index: 1;
+}
+
+.quiro-glow {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(0, 180, 216, 0.20);
+  filter: blur(70px);
+  z-index: 1;
+}
+
+.quiro-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.quiro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(103, 232, 249, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #cffafe;
+  backdrop-filter: blur(8px);
+  font-size: 14px;
+}
+
+.quiro-hero-text h1 {
+  margin: 0;
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 900;
+}
+
+.quiro-hero-text h1 span {
+  color: #67e8f9;
+}
+
+.quiro-hero-description {
+  max-width: 640px;
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+.quiro-hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.quiro-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 24px;
+  border-radius: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.quiro-btn-primary {
+  background: #22d3ee;
+  color: #082f49;
+  box-shadow: 0 0 35px rgba(0, 180, 216, 0.45);
+}
+
+.quiro-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 45px rgba(0, 180, 216, 0.65);
+}
+
+.quiro-btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.quiro-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(103, 232, 249, 0.3);
+}
+
+.quiro-highlights {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.quiro-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  backdrop-filter: blur(8px);
+  font-size: 14px;
+}
+
+.quiro-highlight-item svg {
+  color: #67e8f9;
+  flex-shrink: 0;
+}
+
+.quiro-hero-card-wrap {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.quiro-hero-card-glow {
+  position: absolute;
+  inset: -16px;
+  border-radius: 36px;
+  background: rgba(34, 211, 238, 0.20);
+  filter: blur(32px);
+}
+
+.quiro-hero-card {
+  position: relative;
+  border-radius: 36px;
+  border: 1px solid rgba(103, 232, 249, 0.2);
+  background: rgba(255, 255, 255, 0.10);
+  padding: 12px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+.quiro-hero-image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #0d2238;
+}
+
+.quiro-hero-image {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.quiro-hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #03111f 0%, transparent 45%);
+}
+
+.quiro-hero-info {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  padding: 20px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(7, 24, 41, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.quiro-hero-info p {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #67e8f9;
+}
+
+.quiro-hero-info h2 {
+  margin: 10px 0 0;
+  font-size: 30px;
+}
+
+.quiro-hero-info span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.quiro-section-head {
+  max-width: 720px;
+  margin-bottom: 42px;
+}
+
+.quiro-section-head h2 {
+  margin: 10px 0 0;
+  font-size: 44px;
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.quiro-section-text {
+  margin-top: 16px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #64748b;
+}
+
+.quiro-section-head-dark .quiro-section-text {
+  color: #cbd5e1;
+}
+
+.quiro-mini-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #0891b2;
+}
+
+.quiro-section-head-dark .quiro-mini-title {
+  color: #67e8f9;
+}
+
+.quiro-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.quiro-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.quiro-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.quiro-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.quiro-card {
+  border-radius: 30px;
+}
+
+.quiro-pain-card {
+  background: #f8fafc;
+  border: 1px solid #cffafe;
+  padding: 28px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+  transition: 0.25s ease;
+}
+
+.quiro-pain-card:hover,
+.quiro-service-card:hover {
+  transform: translateY(-6px);
+}
+
+.quiro-pain-card p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.quiro-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  background: #cffafe;
+  color: #0e7490;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.quiro-service-card {
+  background: #ffffff;
+  border: 1px solid #cffafe;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  transition: 0.25s ease;
+}
+
+.quiro-service-card h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.quiro-service-card p {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #64748b;
+}
+
+.quiro-services-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.quiro-services-text {
+  max-width: 520px;
+}
+
+.quiro-testimonial-card {
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.quiro-stars {
+  display: flex;
+  gap: 4px;
+  color: #67e8f9;
+  margin-bottom: 16px;
+}
+
+.quiro-testimonial-text {
+  margin: 0;
+  color: #e2e8f0;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.quiro-testimonial-card h4 {
+  margin: 20px 0 0;
+  font-size: 18px;
+}
+
+.quiro-location-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.quiro-info-card {
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.quiro-info-card svg {
+  color: #0891b2;
+  margin-bottom: 12px;
+}
+
+.quiro-info-card h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.quiro-info-card p {
+  margin-top: 10px;
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.quiro-map-wrap {
+  border-radius: 32px;
+  border: 1px solid #cffafe;
+  background: linear-gradient(180deg, #dff8ff 0%, #f8fdff 100%);
+  padding: 16px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.quiro-map-card {
+  height: 100%;
+  min-height: 320px;
+  background: #ffffff;
+  border: 1px solid #bae6fd;
+  border-radius: 26px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.quiro-map-placeholder {
+  height: 190px;
+  border-radius: 22px;
+  margin-bottom: 22px;
+  background: radial-gradient(circle at center, rgba(0, 180, 216, 0.22), rgba(255, 255, 255, 1) 70%);
+  border: 1px solid #e0f2fe;
+}
+
+.quiro-map-card h3 {
+  margin: 0;
+  font-size: 32px;
+  color: #0f172a;
+}
+
+.quiro-map-card p {
+  margin-top: 12px;
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.quiro-btn-map {
+  margin-top: 24px;
+  background: #06b6d4;
+  color: #ffffff;
+  align-self: flex-start;
+}
+
+.quiro-btn-map:hover {
+  background: #0891b2;
+}
+
+.quiro-cta-section {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.quiro-cta-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #06192b 0%, #04111d 100%);
+  z-index: 1;
+}
+
+.quiro-cta-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 288px;
+  height: 288px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.2);
+  filter: blur(70px);
+  z-index: 1;
+}
+
+.quiro-cta-card {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 52px 34px;
+  text-align: center;
+  border-radius: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.28);
+}
+
+.quiro-cta-card h2 {
+  margin: 16px 0 0;
+  font-size: 54px;
+  line-height: 1.1;
+}
+
+.quiro-cta-card p {
+  max-width: 720px;
+  margin: 20px auto 0;
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.quiro-cta-actions {
+  justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  .quiro-hero-grid,
+  .quiro-location-grid,
+  .quiro-grid-4,
+  .quiro-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quiro-services-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .quiro-hero-text h1 {
+    font-size: 52px;
+  }
+
+  .quiro-section-head h2,
+  .quiro-cta-card h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quiro-section {
+    padding: 70px 0;
+  }
+
+  .quiro-hero {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .quiro-hero-grid,
+  .quiro-location-grid,
+  .quiro-grid-4,
+  .quiro-grid-3,
+  .quiro-grid-2,
+  .quiro-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .quiro-hero-text h1 {
+    font-size: 40px;
+  }
+
+  .quiro-hero-description,
+  .quiro-section-text,
+  .quiro-cta-card p {
+    font-size: 16px;
+  }
+
+  .quiro-section-head h2,
+  .quiro-cta-card h2,
+  .quiro-map-card h3 {
+    font-size: 32px;
+  }
+
+  .quiro-hero-image {
+    height: 460px;
+  }
+
+  .quiro-cta-card {
+    padding: 38px 22px;
+  }
+
+  .quiro-btn {
+    width: 100%;
+  }
+
+  .quiro-hero-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiro-container {
+    width: 92%;
+  }
+
+  .quiro-hero-text h1 {
+    font-size: 34px;
+  }
+
+  .quiro-hero-image {
+    height: 390px;
+  }
+
+  .quiro-hero-info {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    padding: 16px;
+  }
+
+  .quiro-hero-info h2 {
+    font-size: 24px;
+  }
+
+  .quiro-section-head h2,
+  .quiro-cta-card h2,
+  .quiro-map-card h3 {
+    font-size: 28px;
+  }
+
+  .quiro-pain-card p {
+    font-size: 18px;
+  }
+
+  .quiro-service-card h3,
+  .quiro-info-card h3 {
+    font-size: 20px;
+  }
+}
