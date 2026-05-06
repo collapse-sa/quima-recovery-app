@@ -453,29 +453,42 @@ body {
 .quiro-map-wrap {
   border-radius: 32px;
   border: 1px solid #cffafe;
-  background: linear-gradient(180deg, #dff8ff 0%, #f8fdff 100%);
+  background: #f8fdff;
   padding: 16px;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  animation: quiro-map-enter 0.7s ease both;
 }
 
 .quiro-map-card {
   height: 100%;
-  min-height: 320px;
+  min-height: 420px;
   background: #ffffff;
   border: 1px solid #bae6fd;
   border-radius: 26px;
   padding: 26px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 16px;
+  overflow: hidden;
 }
 
-.quiro-map-placeholder {
-  height: 190px;
+.quiro-map-embed {
+  width: 100%;
+  min-height: 240px;
+  flex: 1 1 240px;
   border-radius: 22px;
-  margin-bottom: 22px;
-  background: radial-gradient(circle at center, rgba(0, 180, 216, 0.22), rgba(255, 255, 255, 1) 70%);
   border: 1px solid #e0f2fe;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(186, 230, 253, 0.35);
+}
+
+.quiro-map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  border: 0;
 }
 
 .quiro-map-card h3 {
@@ -485,21 +498,51 @@ body {
 }
 
 .quiro-map-card p {
-  margin-top: 12px;
+  margin: 0;
   color: #64748b;
   line-height: 1.8;
   font-size: 15px;
 }
 
+.quiro-map-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
 .quiro-btn-map {
-  margin-top: 24px;
   background: #06b6d4;
   color: #ffffff;
-  align-self: flex-start;
 }
 
 .quiro-btn-map:hover {
   background: #0891b2;
+}
+
+.quiro-btn-map-outline {
+  border: 1px solid #bae6fd;
+  background: #ffffff;
+  color: #0e7490;
+}
+
+.quiro-btn-map-outline:hover {
+  border-color: #67e8f9;
+  background: #ecfeff;
+  transform: translateY(-2px);
+}
+
+@keyframes quiro-map-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .quiro-cta-section {
@@ -630,6 +673,19 @@ body {
     width: 100%;
   }
 
+  .quiro-map-card {
+    min-height: auto;
+  }
+
+  .quiro-map-embed,
+  .quiro-map-embed iframe {
+    min-height: 260px;
+  }
+
+  .quiro-map-actions {
+    flex-direction: column;
+  }
+
   .quiro-hero-actions {
     flex-direction: column;
   }
@@ -672,5 +728,19 @@ body {
   .quiro-service-card h3,
   .quiro-info-card h3 {
     font-size: 20px;
+  }
+
+  .quiro-map-wrap {
+    padding: 10px;
+  }
+
+  .quiro-map-card {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .quiro-map-embed,
+  .quiro-map-embed iframe {
+    min-height: 230px;
   }
 }

@@ -10,6 +10,7 @@ import {
   Star,
   Phone,
   Clock3,
+  ExternalLink,
 } from "lucide-react";
 import doctorImg from "../assets/img/daniel_quiro.png";
 
@@ -261,22 +262,42 @@ export default function Quiro() {
 
           <div className="quiro-map-wrap">
             <div className="quiro-map-card">
-              <div className="quiro-map-placeholder"></div>
+              <div className="quiro-map-embed" aria-label="Mapa de la ubicación en Google Maps">
+                <iframe
+                  title="Mapa a P.º de las Estrellas 123, Monterrey"
+                  src="https://www.google.com/maps?q=P.%C2%BA%20de%20las%20Estrellas%20123%2C%20Cumbres%205o%20Sector%2C%20Monterrey%2C%20Nuevo%20Le%C3%B3n&output=embed"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
               <h3>Mapa interactivo</h3>
               <p>
                 Aquí puedes integrar Google Maps para mostrar la ubicación
                 exacta y facilitar cómo llegar al consultorio.
               </p>
 
-              <a
-                href="https://wa.me/528181692604?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n"
-                className="quiro-btn quiro-btn-map"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Phone size={20} />
-                Contactar ahora
-              </a>
+              <div className="quiro-map-actions">
+                <a
+                  href="https://wa.me/528181692604?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n"
+                  className="quiro-btn quiro-btn-map"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Phone size={20} />
+                  Contactar ahora
+                </a>
+
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=P.%C2%BA%20de%20las%20Estrellas%20123%2C%20Cumbres%205o%20Sector%2C%20Monterrey%2C%20Nuevo%20Le%C3%B3n"
+                  className="quiro-btn quiro-btn-map-outline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <ExternalLink size={20} />
+                  Abrir en Google Maps
+                </a>
+              </div>
             </div>
           </div>
         </div>
